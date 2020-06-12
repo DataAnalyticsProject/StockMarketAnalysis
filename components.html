@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <title>DJI Components</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Use this script to build out the table-->
+    <script>
+        $(document).ready(function(){
+        $.ajax({
+        url:"Resources/Components.csv",
+        dataType:"text",
+        success:function(data)
+        {
+            var componentsData = data.split(/\r?\n|\r/);
+            var tableData = '<table class="table table-bordered table-striped">';
+            for(var count = 0; count < componentsData.length; count++) {
+                var cellData = componentsData[count].split(",");
+                if(cellData != '') {
+                    tableData += '<tr>';
+                    for(var cellCount=0; cellCount < cellData.length; cellCount++) {
+                        if(count === 0) {
+                            tableData += '<th><b>'+cellData[cellCount]+'</b></th>';
+                            }
+                        else {
+                            tableData += '<td>'+cellData[cellCount]+'</td>';
+                            }
+                        }
+                    tableData += '</tr>';
+                    }
+                }
+            tableData += '</table>';
+            $('#dataTable').html(tableData);
+            }
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+
+    <div id='nav-placeholder'></div>
+
+    <div class="container">
+        <div class="col">
+            <h1>
+                Dow Jones Industrial Average Components
+            </h1>
+            <hr>
+            <p>
+                The following table includes all of the data used for plotting during this project.
+            </p>
+            <div class="table-responsive">
+                <div id="dataTable">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
