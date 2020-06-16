@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 d3.json("https://dataanalyticsproject.github.io/StockMarketAnalysis/Create%20APIs%20for%20Data/data.json")
+=======
+d3.json("/Create%20APIs%20for%20Data/data.json")
+>>>>>>> 911b45e66e66d96d87dd5832f9c0dd682a2f3893
   .then(function(data) {
 
     var dateValue = [];
