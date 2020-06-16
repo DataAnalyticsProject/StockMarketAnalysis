@@ -5,7 +5,7 @@ import json
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/stocks"
 mongo = PyMongo(app)
-
+data = {}
 @app.route("/")
 def welcome():
     """List all available api routes."""
@@ -19,8 +19,12 @@ def welcome():
 @app.route("/api/v1.0/stocks/")
 def stocks():
     collections = list(mongo.db.stock_data.find({},{'_id':False}))
-    return jsonify(collections)
+    
+ 
+    with open('data.json', 'w') as outfile:
+        json.dump(collections, outfile)
      
+    return jsonify(collections)
 
 if __name__ == '__main__':
     app.run(debug=True)
