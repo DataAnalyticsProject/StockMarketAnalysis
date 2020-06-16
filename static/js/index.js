@@ -1,6 +1,6 @@
-d3.json("../../Create APIs for Data/data.json")
+d3.json("https://dataanalyticsproject.github.io/StockMarketAnalysis/Create%20APIs%20for%20Data/data.json")
   .then(function(data) {
-    
+
     var dateValue = [];
     var closeValue = [];
     var highValue = [];
