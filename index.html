@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -43,8 +45,12 @@
                     The rest are chosen from all the major sectors of the economy including information technology, entertainment, and financial services.
                 </p>
                 <hr>
-                <img src="Images/Temp/DJI.png" alt="DJI">
-                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-6">
+                <div id="djiGraph"></div>
+                <script src="static\js\index.js"></script>
             </div>
         </div>
     </div>
