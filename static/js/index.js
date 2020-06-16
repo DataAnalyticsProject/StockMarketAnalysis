@@ -8,8 +8,10 @@ d3.json("../../Create APIs for Data/data.json")
     var openValue = [];
     var stockValue = [];
     
-    var ticker = data.filter(stock => stock.Stock == "DOW");
+    //filter on DJI
+    var ticker = data.filter(stock => stock.Stock == "_DJI");
     
+    //get all values within the dow
     for (var i=0; i < ticker.length; i++) {
 
       dateValue.push(ticker[i].Date);
@@ -20,6 +22,7 @@ d3.json("../../Create APIs for Data/data.json")
       stockValue.push(ticker[i].Stock)
     }
     
+    //create candlestick
     var trace1 = {
       
       x: dateValue, 
@@ -32,7 +35,7 @@ d3.json("../../Create APIs for Data/data.json")
       open: openValue, 
       
       type: 'candlestick', 
-      xaxis: 'x', 
+      xaxis: 'x',   
       yaxis: 'y'
     };
 
@@ -52,18 +55,34 @@ d3.json("../../Create APIs for Data/data.json")
         domain: [0, 1], 
         range: ['2010-01-01', '2020-06-09'], 
         rangeslider: {range: ['2010-01-01', '2020-06-09']}, 
-        title: 'Date', 
-        type: 'date'
+        type: 'date',
+        rangeslider: {
+          visible: false
+        }
       }, 
       yaxis: {
         autorange: true, 
         domain: [0, 1], 
-        range: [114.609999778, 137.410004222], 
         type: 'linear'
       }
     };
 
-    Plotly.newPlot('djiGraph', data, layout);
+    var config = {responsive: true}
 
-    console.log(data)
+    Plotly.newPlot('djiGraph', data, layout, config);
+
+    // create line graph
+    var trace1 = {
+      x: dateValue,
+      y: closeValue,
+      type: 'scatter'
+    };
+    
+    var data = [trace1];
+
+    var layout = {};
+
+    var config = {responsive: true}
+    
+    Plotly.newPlot('lineGraph', data, layout, config);
   });
