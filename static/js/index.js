@@ -1,4 +1,6 @@
-d3.json("https://dataanalyticsproject.github.io/StockMarketAnalysis/Create%20APIs%20for%20Data/data.json")
+// dropdown event
+function optionChanged(value) {
+  d3.json("https://dataanalyticsproject.github.io/StockMarketAnalysis/Create%20APIs%20for%20Data/data.json")
   .then(function(data) {
 
     var dateValue = [];
@@ -34,7 +36,7 @@ d3.json("https://dataanalyticsproject.github.io/StockMarketAnalysis/Create%20API
       low: lowValue, 
       open: openValue, 
       
-      type: 'candlestick', 
+      type: value, 
       xaxis: 'x',   
       yaxis: 'y'
     };
@@ -69,20 +71,12 @@ d3.json("https://dataanalyticsproject.github.io/StockMarketAnalysis/Create%20API
 
     var config = {responsive: true}
 
-    Plotly.newPlot('djiGraph', data, layout, config);
-
-    // create line graph
-    var trace1 = {
-      x: dateValue,
-      y: closeValue,
-      type: 'scatter'
-    };
-    
-    var data = [trace1];
-
-    var layout = {};
-
-    var config = {responsive: true}
-    
-    Plotly.newPlot('lineGraph', data, layout, config);
+    Plotly.newPlot('plot', data, layout, config);
   });
+}
+
+function initializeData() {
+  optionChanged('candlestick');
+}
+
+initializeData();
