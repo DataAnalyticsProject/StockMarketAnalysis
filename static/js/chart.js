@@ -7,6 +7,8 @@ function stockOptionChange(divId,component) {
         var optionText = document.getElementById('chartSelectorTop').value;
       } else if (divId == 'plotBottom') {
         var optionText = document.getElementById('chartSelectorBottom').value;
+      } else {
+        var optionText = document.getElementById('dropdownSelector').value;
       }
 
       var dateValue = [];
