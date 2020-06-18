@@ -1,5 +1,5 @@
 function initializeData() {
-  optionChanged('Candlestick', '_DJI');
+  stockOptionChange('_DJI');
 }
 
 initializeData();

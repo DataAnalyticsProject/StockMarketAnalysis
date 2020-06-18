@@ -1,4 +1,6 @@
 function initializeData() {
+
+    
     d3.json("https://dataanalyticsproject.github.io/StockMarketAnalysis/Create%20APIs%20for%20Data/data.json").then(data => {
         // populate dropdown
 
@@ -20,7 +22,10 @@ function initializeData() {
             .text(x)
             .property("value")
         });
-        optionChanged('Candlestick', '_DJI');
+
+        var defaultDrop = d3.select("#selDataset").attr("id");
+
+        stockOptionChange(defaultDrop, '_DJI');
     });
 }
 
