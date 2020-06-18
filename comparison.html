@@ -11,6 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -18,19 +20,30 @@
     <!--Navigation Bar-->
     <script>
         $(function(){
-          $("#nav-placeholder").load("navbar.html");
+            $("#nav-placeholder").load("navbar.html");
         });
     </script>
 
     <div id='nav-placeholder'></div>
 
-    <div class="container">
-        <div class="col">
-            <h1>
-                Comparing Components
-            </h1>
-            <hr>
-            <img src="Images/under-construction-website.jpg" alt="DJI">
+    <!--Summary-->
+    <div class="container-fluid container-xl">
+        <div class="row"></div>
+        <div class="row">
+            <div class="col col-lg-10">
+                <h2>The Dow Jones Industrial Average</h2>
+                <hr>
+                <div class="control-row">
+                    Stock: <select id="selDataset" onchange="optionChanged(.dropdownSelector.value, this.value)"></select>
+                    Chart Type: <select class="dropdownSelector" onchange="optionChanged(this.value, #selDataset.value)">
+                        <option selected>Candlestick</option>
+                        <option>Line</option>
+                    </select>
+                </div>
+                <div id="plot"></div>
+                <script src="static\js\chart.js"></script>
+                <script src="static\js\comparison.js"></script>
+            </div>
         </div>
     </div>
 </body>

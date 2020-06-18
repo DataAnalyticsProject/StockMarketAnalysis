@@ -20,6 +20,7 @@ function initializeData() {
             .text(x)
             .property("value")
         });
+        optionChanged('Candlestick', '_DJI');
     });
 }
 

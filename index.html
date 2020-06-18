@@ -52,11 +52,12 @@
                 <h2>The Dow Jones Industrial Average</h2>
                 <div id="plot"></div>
                 <div class="control-row">
-                    Chart Type: <select class="dropdownSelector" onchange="optionChanged(this.value)">
+                    Chart Type: <select class="dropdownSelector" onchange="optionChanged(this.value, '_DJI')">
                         <option selected>Candlestick</option>
                         <option>Line</option>
                     </select>
                 </div>
+                <script src="static\js\chart.js"></script>
                 <script src="static\js\index.js"></script>
             </div>
         </div>
