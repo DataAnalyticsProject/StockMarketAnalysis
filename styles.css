@@ -25,6 +25,13 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: purple;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
 .span-header {
     font-family: 'Times New Roman', Times, serif;
     color: purple;

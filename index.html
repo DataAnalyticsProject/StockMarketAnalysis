@@ -45,21 +45,21 @@
                     Started in 1896, the DJIA is comprised of blue-chip stocks, approximately two-thirds of which are represented by companies producing industrial and consumer goods. 
                     The rest are chosen from all the major sectors of the economy including information technology, entertainment, and financial services.
                 </p>
-                <hr>
             </div>
         </div>
         <div class="row">
             <div class="col col-lg-10">
                 <h2>The Dow Jones Industrial Average</h2>
-                <div id="plot"></div>
+                <hr>
                 <div class="control-row">
-                    Chart Type: <select id="dropdownSelector" onchange="stockOptionChange('_DJI')">
+                    Chart Type: <select id="dropdownSelector" onchange="stockOptionChange('plot','_DJI')">
                         <option selected>Candlestick</option>
                         <option>Line</option>
                     </select>
                 </div>
+                <div id="plot"></div>
                 <script src="static\js\chart.js"></script>
-                <script src="static\js\index.js"></script>
+                <script>stockOptionChange('plot','_DJI');</script>
             </div>
         </div>
     </div>
