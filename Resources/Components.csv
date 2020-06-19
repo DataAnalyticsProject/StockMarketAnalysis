@@ -1,31 +1,31 @@
-﻿Symbol,Company Name
-JNJ,Johnson & Johnson
-PFE,Pfizer Inc.
-NKE,NIKE Inc.
-AXP,American Express Company
-KO,The Coca-Cola Company
-AAPL,Apple Inc.
-MSFT,Microsoft Corporation
-MMM,3M Company
-XOM,Exxon Mobil Corporation
-V,Visa Inc.
-HD,The Home Depot Inc.
-WBA,Walgreens Boots Alliance Inc.
-PG,The Procter & Gamble Company
-DIS,The Walt Disney Company
-TRV,The Travelers Companies Inc.
-JPM,JPMorgan Chase & Co.
-MCD,McDonald's Corporation
-VZ,Verizon Communications Inc.
-CAT,Caterpillar Inc.
-UNH,UnitedHealth Group Incorporated
-MRK,Merck & Co. Inc.
-CVX,Chevron Corporation
-RTX,Raytheon Technologies Corporation
-CSCO,Cisco Systems Inc.
-IBM,International Business Machines Corporation
-INTC,Intel Corporation
-GS,The Goldman Sachs Group Inc.
-WMT,Walmart Inc.
-DOW,Dow Inc.
-BA,The Boeing Company
+﻿Symbol,Company Name,Website
+JNJ,Johnson & Johnson,https://www.jnj.com/
+PFE,Pfizer Inc.,https://www.pfizer.com/
+NKE,NIKE Inc.,https://www.nike.com/
+AXP,American Express Company,https://www.americanexpress.com/
+KO,The Coca-Cola Company,https://www.coca-cola.com/
+AAPL,Apple Inc.,https://www.apple.com/
+MSFT,Microsoft Corporation,https://www.microsoft.com/
+MMM,3M Company,https://www.3m.com/
+XOM,Exxon Mobil Corporation,https://corporate.exxonmobil.com/
+V,Visa Inc.,https://www.visa.com/
+HD,The Home Depot Inc.,https://www.homedepot.com/
+WBA,Walgreens Boots Alliance Inc.,https://www.walgreensbootsalliance.com/
+PG,The Procter & Gamble Company,https://pg.com
+DIS,The Walt Disney Company,https://thewaltdisneycompany.com/
+TRV,The Travelers Companies Inc.,https://www.travelers.com/
+JPM,JPMorgan Chase & Co.,https://www.jpmorganchase.com/
+MCD,McDonald's Corporation,https://corporate.mcdonalds.com/
+VZ,Verizon Communications Inc.,https://www.verizon.com
+CAT,Caterpillar Inc.,https://www.cat.com/
+UNH,UnitedHealth Group Incorporated,https://www.unitedhealthgroup.com/
+MRK,Merck & Co. Inc.,https://www.merck.com/
+CVX,Chevron Corporation,https://www.chevron.com/
+RTX,Raytheon Technologies Corporation,https://www.rtx.com/
+CSCO,Cisco Systems Inc.,https://www.cisco.com/
+IBM,International Business Machines Corporation,https://www.ibm.com/
+INTC,Intel Corporation,https://www.intel.com/
+GS,The Goldman Sachs Group Inc.,https://www.goldmansachs.com/
+WMT,Walmart Inc.,https://corporate.walmart.com/
+DOW,Dow Inc.,https://www.dow.com/
+BA,The Boeing Company,http://www.boeing.com/
